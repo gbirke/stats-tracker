@@ -2,6 +2,10 @@
   "name": "statstracker",
   "version": "0.0.1",
   "dependencies": {
-    "bootstrap": "http://twitter.github.com/bootstrap/assets/bootstrap.zip"
+    "bootstrap": "http://twitter.github.com/bootstrap/assets/bootstrap.zip",
+    "requirejs": "~2.1.4",
+    "backbone": "~0.9.10",
+    "underscore": "~1.4.4",
+    "jquery": "~1.9.1"
   }
 }
