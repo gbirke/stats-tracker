@@ -13,7 +13,7 @@ require.config({
         'i18nprecompile': '../vendors/require-handlebars-plugin/hbs/i18nprecompile',
         'hbs': '../vendors/require-handlebars-plugin/hbs'
     },
-    deps: [ "backbone.marionette.handlebars" ],
+    deps: ["backbone.marionette.handlebars"],
     shim: {
         'underscore': {
             exports: '_'
@@ -26,12 +26,16 @@ require.config({
             exports: 'Handlebars'
         }
     },
-    hbs: { disableI18n: true }
+    hbs: {
+        disableI18n: true
+    }
 });
 
 require(['jquery', 'backbone.marionette', 'views/app'], function ($, Marionette, AppView) {
 
-    var statList = new Marionette.Region({el:'#statlist'}),
+    var statList = new Marionette.Region({
+        el: '#statlist'
+    }),
         v = new AppView();
     statList.show(v);
 });
