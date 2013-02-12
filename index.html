@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stats tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <div class="container">
+
+      <h1>Stats tracker</h1>
+      <!-- TODO: Create closable help text -->
+      <p><a href="#" class="btn btn-primary"><i class="icon-plus icon-white"></i> Add stat</a></p>
+      <ul class="statlist">
+        <li><span class="badge-container"><span class="badge">65</span></span> Health </li>
+        <li><span class="badge-container"><span class="badge">784</span></span> Silver </li>
+        <li class="current">
+          <div class="stat-value"><span class="badge-container"><span class="badge">4</span></span> Copper </div>
+          <div class="action">
+            <div class="btn-group">
+              <button class="btn btn-small">+1</button>
+              <button class="btn btn-small">+10</button>
+              <button class="btn btn-small">+100</button>
+              <button class="btn btn-small">+1000</button>
+            </div>
+            <div class="btn-group">
+              <button class="btn btn-small">-1</button>
+              <button class="btn btn-small">-10</button>
+              <button class="btn btn-small">-100</button>
+              <button class="btn btn-small">-1000</button>
+            </div>
+          </div>
+        </li>
+        <li><span class="badge-container"><span class="badge">0</span></span> Wounds </li>
+      </ul>
+
+
+    </div>
+
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
