@@ -9,6 +9,9 @@
     "jquery": "~1.9.1",
     "backbone.marionette": "~1.0.0-rc6",
     "backbone.wreqr": "~0.1.1",
-    "backbone.babysitter": "~0.0.4"
+    "backbone.babysitter": "~0.0.4",
+    "handlebars": "~1.0.0-rc.2",
+    "backbone.marionette.handlebars": "~0.2.0",
+    "require-handlebars-plugin": "~0.4.0"
   }
 }
