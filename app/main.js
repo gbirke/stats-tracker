@@ -19,8 +19,9 @@ require.config({
     }
 });
 
-require(['jquery', 'views/app'], function ($, AppView) {
-    var v = new AppView();
-    v.render();
-    $('#statlist').html(v.el);
+require(['jquery', 'marionette', 'views/app'], function ($, Marionette, AppView) {
+
+    var statList = new Marionette.Region({el:'#statlist'}),
+        v = new AppView();
+    statList.show(v);
 });
