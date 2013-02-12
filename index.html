@@ -15,7 +15,7 @@
       <h1>Stats tracker</h1>
       <!-- TODO: Create closable help text -->
       <p><a href="#" class="btn btn-primary"><i class="icon-plus icon-white"></i> Add stat</a></p>
-      <ul class="statlist">
+      <ul id="statlist" class="statlist" >
         <li><span class="badge-container"><span class="badge">65</span></span> Health </li>
         <li><span class="badge-container"><span class="badge">784</span></span> Silver </li>
         <li class="current">
@@ -40,6 +40,10 @@
 
 
     </div>
+
+    <script type="template" id="statItem">
+      <li><span class="badge-container"><span class="badge">155</span></span> Silver </li>
+    </script>
 
 
     <script data-main="app/main" src="vendors/requirejs/require.js"></script>
