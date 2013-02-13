@@ -5,6 +5,7 @@ require.config({
         'underscore': '../vendors/underscore/underscore',
         'backbone': '../vendors/backbone/backbone',
         'backbone.babysitter': '../vendors/backbone.babysitter/lib/amd/backbone.babysitter',
+        'backbone.localStorage': '../vendors/backbone.localStorage/backbone.localStorage-min',
         'backbone.wreqr': '../vendors/backbone.wreqr/lib/amd/backbone.wreqr',
         'backbone.marionette': '../vendors/backbone.marionette/lib/core/amd/backbone.marionette',
         'backbone.marionette.handlebars': '../vendors/backbone.marionette.handlebars/src/backbone.marionette.handlebars',
@@ -20,6 +21,10 @@ require.config({
         },
         'backbone': {
             deps: ['underscore', 'jquery'],
+            exports: 'Backbone'
+        },
+        'backbone.localStorage': {
+            deps: ['backbone'],
             exports: 'Backbone'
         },
         'handlebars': {

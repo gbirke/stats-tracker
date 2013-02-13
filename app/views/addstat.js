@@ -12,8 +12,11 @@ define(['backbone.marionette','collections/stats', 'hbs!templates/add-stat'], fu
 	    	'click #addstat': 'addstat'
 	    },
 	    addstat: function(evt) {
-	    	console.log(evt, this);
+	    	var name;
 	    	evt.preventDefault();
+	    	name = this.ui.newStat.val();
+
+	    	stats.create({name: name, value: 0});
 	    }
 	});
 

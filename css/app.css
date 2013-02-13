@@ -33,3 +33,7 @@
 .action {
   padding: 5px 0;
 }
+
+#addstat .text {
+  margin-bottom: 0;
+}
