@@ -19,11 +19,13 @@ define(['backbone.marionette', 'views/editstat', 'hbs!templates/stat-item'], fun
 	    	if(this.isActive) {
 	    		this.isActive = false;
 	    		this.editView.close();
+	    		this.$el.removeClass('current');
 	    	}
 	    	else {
 	    		this.isActive = true;
 	    		this.editView = new EditStatView({model: this.model});
 	    		this.$el.append(this.editView.render().$el);
+	    		this.$el.addClass('current');
 	    	}
 	    },
 	    updateValue: function() {

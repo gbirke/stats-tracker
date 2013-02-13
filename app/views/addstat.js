@@ -9,6 +9,8 @@ define(['jquery', 'backbone.marionette','collections/stats', 'hbs!templates/add-
 	    	newStat: '#newStat'
 	    },
 	    events: {
+	    	// TODO Handle onkey event and Enter key
+	    	// TOOD put form in template and handle form submit (iPhone)
 	    	'click #addstat': 'addstat'
 	    },
 	    addstat: function(evt) {
@@ -23,8 +25,8 @@ define(['jquery', 'backbone.marionette','collections/stats', 'hbs!templates/add-
 	    		return;
 	    	}
 
-
 	    	stats.create({name: name, value: 0});
+	    	this.ui.newStat.blur().val("");
 	    }
 	});
 
