@@ -36,7 +36,7 @@ require.config({
     }
 });
 
-require(['jquery', 'backbone.marionette', 'views/app', 'views/addstat'], function ($, Marionette, AppLayout, AddStatView) {
+require(['jquery', 'backbone.marionette', 'collections/stats', 'views/app', 'views/addstat', 'views/stats'], function ($, Marionette, stats, AppLayout, AddStatView, StatsView) {
 
     var app = new Marionette.Application();
     app.addRegions({
@@ -48,5 +48,9 @@ require(['jquery', 'backbone.marionette', 'views/app', 'views/addstat'], functio
 
     var addStat = new AddStatView();
     layout.addstat.show(addStat);
+
+    var statsView = new StatsView({collection: stats});
+    layout.statlist.show(statsView);
+    stats.fetch();
 
 });
