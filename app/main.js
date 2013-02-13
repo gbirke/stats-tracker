@@ -40,7 +40,7 @@ require(['jquery', 'backbone.marionette', 'collections/stats', 'views/app', 'vie
 
     var app = new Marionette.Application();
     app.addRegions({
-      mainRegion: "#main"
+        mainRegion: "#main"
     });
 
     var layout = new AppLayout();
@@ -49,7 +49,9 @@ require(['jquery', 'backbone.marionette', 'collections/stats', 'views/app', 'vie
     var addStat = new AddStatView();
     layout.addstat.show(addStat);
 
-    var statsView = new StatsView({collection: stats});
+    var statsView = new StatsView({
+        collection: stats
+    });
     layout.statlist.show(statsView);
     stats.fetch();
 
