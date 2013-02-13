@@ -19,6 +19,7 @@ define(['jquery', 'backbone.marionette','collections/stats', 'hbs!templates/add-
 	    		return;
 	    	}
 	    	if(dup = stats.findByName(name)) {
+	    		dup.trigger("stat:input:duplicate", dup);
 	    		return;
 	    	}
 
