@@ -1,7 +1,7 @@
-define(['bootstrap'], function(Bootstrap) {
+define(['backbone'], function(Backbone) {
 	"use strict";
 
-	var Stat = Bootstrap.Model.extend({});
+	var Stat = Backbone.Model.extend({});
 
 	return Stat;
 });

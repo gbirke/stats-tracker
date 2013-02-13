@@ -1,7 +1,7 @@
-define(['bootstrap','models/stat'], function(Bootstrap, Stat) {
+define(['backbone','models/stat'], function(Backbone, Stat) {
 	"use strict";
 
-	var Stats = Bootstrap.Collection.extend({
+	var Stats = Backbone.Collection.extend({
 		model: Stat
 	});
 
