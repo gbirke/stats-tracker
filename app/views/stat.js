@@ -3,9 +3,12 @@ define(['backbone.marionette', 'views/editstat', 'hbs!templates/stat-item'], fun
 	var StatView = Marionette.ItemView.extend({
 		modelEvents: {
 			'stat:input:duplicate': function(){
-				// TODO Show change view for this element
+				if(!this.isActive) {
+					this.toActiveState();
+				}
 			},
-			'change:value' : 'updateValue'
+			'change:value' : 'updateValue',
+			"stat:added" : "toActiveState"
 		},
 		template: {
 	    	type: "handlebars",
@@ -22,13 +25,16 @@ define(['backbone.marionette', 'views/editstat', 'hbs!templates/stat-item'], fun
 	    		this.$el.removeClass('current');
 	    	}
 	    	else {
-	    		this.isActive = true;
-	    		this.editView = new EditStatView({model: this.model});
-	    		this.$el.append(this.editView.render().$el);
-	    		this.$el.addClass('current');
+	    		this.toActiveState();
 	    	}
 	    },
-	    updateValue: function() {
+	    toActiveState: function() {
+	    	this.isActive = true;
+    		this.editView = new EditStatView({model: this.model});
+    		this.$el.append(this.editView.render().$el);
+    		this.$el.addClass('current');
+	    },
+	    updateValue: function() {	    	
 	    	var v = this.model.get('value');
 	    	this.$('.badge').text(v);
 	    }

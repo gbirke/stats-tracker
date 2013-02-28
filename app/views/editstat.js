@@ -11,7 +11,7 @@ define(['jquery', 'backbone.marionette','hbs!templates/edit-stat'], function($, 
 	    	"click button": 'handleChange'
 	    },
 	    /**
-	     * Handle click to buttons - Add buuton amount (positive or negative)
+	     * Handle click to buttons - Add button amount (positive or negative)
 	     * to model value
 	     */
 	    handleChange: function(evt) {
