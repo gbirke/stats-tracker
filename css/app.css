@@ -9,8 +9,12 @@
   margin:0; 
 }
 .statlist li {
-  border-bottom: 1px gray solid;
+  border-bottom: 1px #ccc solid;
   padding:5px;
+}
+
+.statlist li:nth-child(2n) {
+  background: #e5eeff;
 }
 
 .action .btn {
@@ -22,15 +26,14 @@
 }
 
 .btn-group {
-  margin-bottom:5px;
+  margin-bottom:15px;
 }
 
 .statlist .current {
   padding: 5px;
-  background: #e5eeff;
-  color:blue;
 }
 .action {
+  margin-top:20px;
   padding: 5px 0;
 }
 
@@ -41,4 +44,16 @@
 
 #addstat .text {
   margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+    } 
+
+#addstat .text {
+  width:180px;
+}
+  
+
 }
