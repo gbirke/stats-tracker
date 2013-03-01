@@ -13,6 +13,24 @@ module.exports = function (grunt) {
                 indentSize: 4
             }
         },
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: 'app',
+                    findNestedDependencies: true,
+                    logLevel: 3,
+                    mainConfigFile: './app/main.js',
+                    name: "main",
+                    optimize:"none",
+                    //name: 'libs/almond',
+                    //include: 'main',
+                    //optimize: 'uglify2',
+                    //optimizeCss: 'none',
+                    out: './dist/main.js'
+                    //wrap: true
+                }
+            }
+        },
         jshint: {
             options: {
                 curly: true,
@@ -35,6 +53,7 @@ module.exports = function (grunt) {
 
     // NPM tasks
     grunt.loadNpmTasks('grunt-beautify');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
 
     // Default task.
     grunt.registerTask('default', 'lint');
