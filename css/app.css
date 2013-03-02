@@ -46,6 +46,16 @@
   min-width:5.1em;
 }
 
+.info {
+  margin-top: 5em;
+  padding:7px;
+}
+
+.info p {
+  text-align:center;
+  margin: 1em 0 ;
+}
+
 .loading {
   text-align: center;
   margin-top:10em;
