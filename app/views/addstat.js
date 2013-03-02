@@ -12,9 +12,9 @@ define(['jquery', 'backbone.marionette','collections/stats', 'hbs!templates/add-
 	    	newStat: '#newStat'
 	    },
 	    events: {
-	    	// TODO Handle onkey event and Enter key
-	    	// TOOD put form in template and handle form submit (iPhone)
-	    	'click #addstat': 'addstat'
+	    	// TOOD check if form submit works with iOS keyboard
+	    	'submit': 'addstat',
+	    	'click #addstat-submit': 'addstat'
 	    },
 	    addstat: function(evt) {
 	    	var name, dup, stat;
