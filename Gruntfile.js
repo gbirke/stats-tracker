@@ -116,6 +116,7 @@ module.exports = function (grunt) {
     // Default task.
     grunt.registerTask('default', 'lint');
 
+    grunt.registerTask('deploy-package', ['package', 'ftp-deploy']);
     grunt.registerTask('package', ['clean:dist', 'compile:js', 'compile:css', 'compile:html', 'copy:dist']);
     grunt.registerTask('compile:js', ['requirejs']);
     grunt.registerTask('compile:css', ['imageEmbed', 'cssmin', 'clean:css']);
