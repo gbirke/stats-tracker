@@ -32,6 +32,15 @@
   margin: 0 7px 0 0;
 }
 
+.statlist .action,
+.btn-group .btn {
+  -webkit-user-select: none;         
+  -moz-user-select: none; 
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 .stat {
   padding:5px;
 }
