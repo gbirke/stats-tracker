@@ -71,6 +71,18 @@ module.exports = function (grunt) {
                 
             }
         },
+        'ftp-deploy': {
+          build: {
+            auth: {
+              host: 'statstracker.gildehaus-hannover.de',
+              port: 21,
+              authKey: 'key1'
+            },
+            src: 'dist',
+            dest: 'statstracker',
+            exclusions: ['dist/**/.DS_Store', 'dist/**/Thumbs.db', 'dist/tmp']
+          }
+        },
         jshint: {
             options: {
                 curly: true,
@@ -97,6 +109,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-ftp-deploy');
     grunt.loadNpmTasks("grunt-image-embed");
     grunt.loadNpmTasks('grunt-targethtml');
 
