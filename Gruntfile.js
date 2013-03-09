@@ -25,10 +25,10 @@ module.exports = function (grunt) {
                     logLevel: 3,
                     mainConfigFile: './app/main.js',
                     name: "main",
-                    optimize:"none",
+                    //optimize:"none",
                     //name: 'libs/almond',
                     //include: 'main',
-                    //optimize: 'uglify2',
+                    optimize: 'uglify2',
                     //optimizeCss: 'none',
                     out: './dist/main.js'
                     //wrap: true
